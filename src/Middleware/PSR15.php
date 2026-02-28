@@ -68,7 +68,7 @@ final class PSR15 implements MiddlewareInterface
             $responseSize = 0;
             $contentLength = $response->getHeaderLine('Content-Length');
             if ($contentLength !== '') {
-                $responseSize = (int)$contentLength;
+                $responseSize = (int) $contentLength;
             } else {
                 $responseSize = $response->getBody()->getSize() ?? 0;
             }
@@ -115,7 +115,7 @@ final class PSR15 implements MiddlewareInterface
     {
         $contentLength = $request->getHeaderLine('Content-Length');
         if ($contentLength !== '') {
-            return (int)$contentLength;
+            return (int) $contentLength;
         }
         return $request->getBody()->getSize() ?? 0;
     }

@@ -264,7 +264,7 @@ final class ClientTest extends TestCase
         // Verify file exists
         $this->assertTrue(
             file_exists($storagePath) || file_exists($storagePath . '.recovering'),
-            'Persistence file should exist'
+            'Persistence file should exist',
         );
 
         // New client should load from disk

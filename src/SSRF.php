@@ -86,7 +86,7 @@ final class SSRF
             return false;
         }
 
-        $bits = (int)$bits;
+        $bits = (int) $bits;
         $len = strlen($ipBin);
         $mask = str_repeat("\xff", intdiv($bits, 8));
         $remainder = $bits % 8;
@@ -124,7 +124,7 @@ final class SSRF
 
         if ($scheme !== 'https' && !$isLocalhost) {
             throw new InvalidArgumentException(
-                "HTTPS required for non-localhost endpoint: {$endpoint}"
+                "HTTPS required for non-localhost endpoint: {$endpoint}",
             );
         }
 
@@ -134,7 +134,7 @@ final class SSRF
 
         if (!$isLocalhost && self::isPrivateIp($hostname)) {
             throw new InvalidArgumentException(
-                "Endpoint resolves to private/reserved IP: {$hostname}"
+                "Endpoint resolves to private/reserved IP: {$hostname}",
             );
         }
 

@@ -76,7 +76,7 @@ final class Laravel
                     'path' => $path,
                     'status_code' => 500,
                     'response_time_ms' => round($elapsedMs, 2),
-                    'request_size' => (int)$request->header('Content-Length', '0'),
+                    'request_size' => (int) $request->header('Content-Length', '0'),
                     'response_size' => 0,
                     'consumer_id' => $this->identifyConsumer($request),
                 ]);
@@ -96,7 +96,7 @@ final class Laravel
 
             $responseSize = 0;
             if (method_exists($response, 'headers') && $response->headers->has('Content-Length')) {
-                $responseSize = (int)$response->headers->get('Content-Length');
+                $responseSize = (int) $response->headers->get('Content-Length');
             } elseif (method_exists($response, 'getContent')) {
                 $responseSize = strlen($response->getContent());
             }
@@ -115,7 +115,7 @@ final class Laravel
                 'path' => $path,
                 'status_code' => $statusCode,
                 'response_time_ms' => round($elapsedMs, 2),
-                'request_size' => (int)$request->header('Content-Length', '0'),
+                'request_size' => (int) $request->header('Content-Length', '0'),
                 'response_size' => $responseSize,
                 'consumer_id' => $this->identifyConsumer($request),
             ]);

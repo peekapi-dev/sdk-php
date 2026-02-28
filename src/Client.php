@@ -77,13 +77,13 @@ class Client
         $rawEndpoint = ($options['endpoint'] ?? '') ?: self::DEFAULT_ENDPOINT;
         $this->endpoint = SSRF::validateEndpoint($rawEndpoint);
 
-        $this->flushInterval = (float)($options['flush_interval'] ?? self::DEFAULT_FLUSH_INTERVAL);
-        $this->batchSize = (int)($options['batch_size'] ?? self::DEFAULT_BATCH_SIZE);
-        $this->maxBufferSize = (int)($options['max_buffer_size'] ?? self::DEFAULT_MAX_BUFFER_SIZE);
-        $this->maxStorageBytes = (int)($options['max_storage_bytes'] ?? self::DEFAULT_MAX_STORAGE_BYTES);
-        $this->maxEventBytes = (int)($options['max_event_bytes'] ?? self::DEFAULT_MAX_EVENT_BYTES);
-        $this->debug = (bool)($options['debug'] ?? false);
-        $this->collectQueryString = (bool)($options['collect_query_string'] ?? false);
+        $this->flushInterval = (float) ($options['flush_interval'] ?? self::DEFAULT_FLUSH_INTERVAL);
+        $this->batchSize = (int) ($options['batch_size'] ?? self::DEFAULT_BATCH_SIZE);
+        $this->maxBufferSize = (int) ($options['max_buffer_size'] ?? self::DEFAULT_MAX_BUFFER_SIZE);
+        $this->maxStorageBytes = (int) ($options['max_storage_bytes'] ?? self::DEFAULT_MAX_STORAGE_BYTES);
+        $this->maxEventBytes = (int) ($options['max_event_bytes'] ?? self::DEFAULT_MAX_EVENT_BYTES);
+        $this->debug = (bool) ($options['debug'] ?? false);
+        $this->collectQueryString = (bool) ($options['collect_query_string'] ?? false);
         $this->onError = $options['on_error'] ?? null;
         $this->identifyConsumer = $options['identify_consumer'] ?? null;
 
@@ -199,10 +199,10 @@ class Client
         }
 
         // Sanitize
-        $event['method'] = strtoupper(substr((string)($event['method'] ?? ''), 0, self::MAX_METHOD_LENGTH));
-        $event['path'] = substr((string)($event['path'] ?? ''), 0, self::MAX_PATH_LENGTH);
+        $event['method'] = strtoupper(substr((string) ($event['method'] ?? ''), 0, self::MAX_METHOD_LENGTH));
+        $event['path'] = substr((string) ($event['path'] ?? ''), 0, self::MAX_PATH_LENGTH);
         if (isset($event['consumer_id'])) {
-            $event['consumer_id'] = substr((string)$event['consumer_id'], 0, self::MAX_CONSUMER_ID_LENGTH);
+            $event['consumer_id'] = substr((string) $event['consumer_id'], 0, self::MAX_CONSUMER_ID_LENGTH);
         }
 
         // Timestamp
@@ -357,7 +357,7 @@ class Client
             $size = file_exists($path) ? filesize($path) : 0;
 
             if ($size !== false && $size >= $this->maxStorageBytes) {
-                    $this->debugLog("[peekapi] storage file full, dropping " . count($events) . " events\n");
+                $this->debugLog("[peekapi] storage file full, dropping " . count($events) . " events\n");
                 return;
             }
 
@@ -409,7 +409,7 @@ class Client
                 if ($events !== []) {
                     $this->buffer = array_merge(
                         $this->buffer,
-                        array_slice($events, 0, $this->maxBufferSize)
+                        array_slice($events, 0, $this->maxBufferSize),
                     );
                     $this->debugLog("[peekapi] loaded " . count($events) . " events from disk\n");
                 }

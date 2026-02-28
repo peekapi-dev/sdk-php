@@ -109,7 +109,9 @@ PHP;
 
         $events = [];
         foreach (explode("\n", trim($content)) as $line) {
-            if ($line === '') continue;
+            if ($line === '') {
+                continue;
+            }
             $parsed = json_decode($line, true);
             if (is_array($parsed)) {
                 if (array_is_list($parsed)) {
