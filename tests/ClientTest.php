@@ -29,7 +29,7 @@ final class ClientTest extends TestCase
     public function testMissingEndpointUsesDefault(): void
     {
         $client = new Client(['api_key' => 'ak_test', 'endpoint' => '', 'storage_path' => tmpStoragePath()]);
-        $this->assertStringContainsString('supabase.co', $client->getEndpoint());
+        $this->assertStringContainsString('ingest.peekapi.dev', $client->getEndpoint());
         $client->shutdown();
     }
 

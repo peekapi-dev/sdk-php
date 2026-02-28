@@ -2,6 +2,7 @@
 
 [![Packagist](https://img.shields.io/packagist/v/peekapi/peekapi)](https://packagist.org/packages/peekapi/peekapi)
 [![license](https://img.shields.io/packagist/l/peekapi/peekapi)](./LICENSE)
+[![CI](https://github.com/peekapi-dev/sdk-php/actions/workflows/ci.yml/badge.svg)](https://github.com/peekapi-dev/sdk-php/actions/workflows/ci.yml)
 
 Zero-dependency PHP SDK for [PeekAPI](https://peekapi.dev). PSR-15 middleware for Slim/Mezzio and a dedicated Laravel middleware with auto-configuration from env vars.
 
@@ -151,6 +152,13 @@ The callback receives an associative array of lowercase header names and should 
 - PHP >= 8.2
 - `ext-curl`
 - `ext-json`
+
+## Contributing
+
+1. Fork & clone the repo
+2. Install dependencies — `composer install`
+3. Run tests — `composer exec phpunit`
+4. Submit a PR
 
 ## License
 
