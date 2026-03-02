@@ -1,9 +1,14 @@
 {
     "name": "peekapi/peekapi",
-    "description": "Zero-dependency PHP SDK for API Usage Dashboard. PSR-15 and Laravel middleware included.",
+    "description": "Zero-dependency PHP SDK for PeekAPI — PSR-15 and Laravel middleware for API analytics",
     "type": "library",
     "license": "MIT",
-    "keywords": ["api", "analytics", "middleware", "psr-15", "laravel"],
+    "keywords": ["api", "analytics", "middleware", "psr-15", "laravel", "peekapi"],
+    "homepage": "https://github.com/peekapi-dev/sdk-php",
+    "support": {
+        "issues": "https://github.com/peekapi-dev/sdk-php/issues",
+        "source": "https://github.com/peekapi-dev/sdk-php"
+    },
     "require": {
         "php": ">=8.2",
         "ext-curl": "*",
