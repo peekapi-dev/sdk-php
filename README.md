@@ -155,6 +155,8 @@ The callback receives an associative array of lowercase header names and should 
 
 ## Contributing
 
+Bug reports and feature requests: [peekapi-dev/community](https://github.com/peekapi-dev/community/issues)
+
 1. Fork & clone the repo
 2. Install dependencies — `composer install`
 3. Run tests — `composer exec phpunit`

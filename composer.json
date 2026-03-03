@@ -6,7 +6,7 @@
     "keywords": ["api", "analytics", "middleware", "psr-15", "laravel", "peekapi"],
     "homepage": "https://github.com/peekapi-dev/sdk-php",
     "support": {
-        "issues": "https://github.com/peekapi-dev/sdk-php/issues",
+        "issues": "https://github.com/peekapi-dev/community/issues",
         "source": "https://github.com/peekapi-dev/sdk-php"
     },
     "require": {
