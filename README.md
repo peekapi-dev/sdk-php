@@ -1,5 +1,7 @@
 # PeekAPI — PHP SDK
 
+> **PeekAPI has shut down.** The service closed in November 2026 and its ingest endpoint is offline, so this SDK can no longer deliver events. The package stays published for reference only; remove it from your project. See [peekapi.dev](https://peekapi.dev).
+
 [![Packagist](https://img.shields.io/packagist/v/peekapi/peekapi)](https://packagist.org/packages/peekapi/peekapi)
 [![license](https://img.shields.io/packagist/l/peekapi/peekapi)](./LICENSE)
 [![CI](https://github.com/peekapi-dev/sdk-php/actions/workflows/ci.yml/badge.svg)](https://github.com/peekapi-dev/sdk-php/actions/workflows/ci.yml)
